@@ -33,7 +33,7 @@
         <img src="../images/Fresh_deskTX_1920-1200.JPG" alt="医院门诊信息管理系统" class="img-thumbnail" />
       </div>
       <div class="col-sm-4">
-        <h2 class="text-center">职工登陆</h2>
+        <h2 class="text-center">管理员登陆</h2>
         <form class="form-horizontal" action="doLogin.php" method="post" onsubmit = "return check(this.name)" name="loginForm">
           <div class="form-group">
             <label class="control-label col-sm-4" for="account">账号:</label>

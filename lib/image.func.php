@@ -6,8 +6,8 @@ require_once '../include.php';
 function verifyImage($type=3,$length=4,$pixel=0,$line=0,$sess_name = "verify"){
 	session_start();
 	//创建画布
-	$width = 80;
-	$height = 28;
+	$width = 100;
+	$height = 36;
 	$image = imagecreatetruecolor ( $width, $height );
 	$white = imagecolorallocate ( $image, 255, 255, 255 );
 	$black = imagecolorallocate ( $image, 0, 0, 0 );
@@ -16,7 +16,7 @@ function verifyImage($type=3,$length=4,$pixel=0,$line=0,$sess_name = "verify"){
 	$chars = buildRandomString ( $type, $length );
 	$_SESSION [$sess_name] = $chars;
 	//$fontfiles = array ("MSYH.TTF", "MSYHBD.TTF", "SIMLI.TTF", "SIMSUN.TTC", "SIMYOU.TTF", "STZHONGS.TTF" );
-	$fontfiles = array ("SIMYOU.TTF" );
+	$fontfiles = array ("SIMYOU.TTF", "FREESCPT.TTF" );
 	//由于字体文件比较大，就只保留一个字体，如果有需要的同学可以自己添加字体，字体在你的电脑中的fonts文件夹里有，直接运行输入fonts就能看到相应字体
 	for($i = 0; $i < $length; $i ++) {
 		$size = mt_rand ( 14, 18 );

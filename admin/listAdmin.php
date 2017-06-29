@@ -57,8 +57,9 @@
 	    	$sql = "select*from employee where e_id in (select a_e_id from admin)";
 	    	$row = fetchAll($conn, $sql);
 	    	$nums = getResultNum($conn, $sql);
-	    	$totalPage = ceil($nums / 5);
+	    	$totalPage = ceil($nums / $numOfRow);
 	    	$startPage = ($page - 1) * $numOfRow;
+
 	    	$sql = "select*from employee where e_id in (select a_e_id from admin) limit $startPage, $numOfRow";
 	    	$row = fetchAll($conn, $sql);
 
@@ -75,8 +76,10 @@
 	</table>
 </main>
 <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-	<?php 
-		$str = showPage($page,$totalPage);
-		echo $str;
-	 ?>
+	<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+		<?php 
+			$str = showPage($page,$totalPage);
+			echo $str;
+		 ?>
+	</main>
 </main>
