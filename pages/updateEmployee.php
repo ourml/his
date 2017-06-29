@@ -21,6 +21,10 @@
    	$rows = fetchAll($conn, $sql);
 
     ?>
+
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+  <h1 class="text-center">医院员工基本信息</h1>
+</main>
   <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
   	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
   	            <thead>

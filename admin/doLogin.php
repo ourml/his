@@ -9,6 +9,7 @@
 
 	$verify1 = $_SESSION['verify'];
 
+    if($account==1){
 	if (!strnatcasecmp($verify, $verify1)) {
 		$sql = "select * from admin where a_id='{$account}' and a_pwd='{$pwd}'";
 		$row = checkAdmin($conn, $sql);
@@ -30,4 +31,7 @@
 	} else {
 		alertMes("验证码错误", "login.php");
 	}
+    }else{
+        alertMes("不是超级管理员", "login.php");
+    }
 	
